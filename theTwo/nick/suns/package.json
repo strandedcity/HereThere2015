@@ -1,0 +1,17 @@
+{
+  "name": "suns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "suns.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coordinate-tz": "^0.1.2",
+    "lodash": "^3.3.1",
+    "suncalc": "^1.6.0",
+    "zoneinfo": "^0.1.8"
+  }
+}
