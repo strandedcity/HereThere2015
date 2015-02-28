@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/three.min.js"></script>
+    <script type="text/javascript" src="../lib/OrbitControls.js"></script>
+    <script type="text/javascript" src="basicSetup.js"></script>
+    <link rel="stylesheet" type="text/css" href="example.css">
+</head>
+<body>
+<script type="text/javascript">
+    var sceneMaker = new sceneMaker(),
+            scene = sceneMaker.scene;
+
+    ///////////////// custom code for this example
+
+    // Draw a curve
+    var red_material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
+    var curve = new THREE.ArcCurve(
+            0,  0,              // ax, aY
+            60, 0,              // aRadius, aStartAngle
+            2 * Math.PI / 3,    //  aEndAngle
+            false               // aClockwise
+    );
+
+    var extrusionSettings = {
+        size: 30, height: 4, curveSegments: 3,
+        bevelThickness: 1, bevelSize: 2, bevelEnabled: false,
+        material: red_material, extrudeMaterial: 1
+    };
+
+    var shape = new THREE.Shape(curve.getPoints( 30 ));
+    var geometry = new THREE.ExtrudeGeometry( shape, extrusionSettings );
+
+    var mesh = new THREE.Mesh(geometry,red_material);
+    scene.add(mesh);
+    sceneMaker.render();
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/three.min.js"></script>
+    <script type="text/javascript" src="../lib/OrbitControls.js"></script>
+    <script type="text/javascript" src="basicSetup.js"></script>
+    <link rel="stylesheet" type="text/css" href="example.css">
+</head>
+<body>
+<script type="text/javascript">
+    var sceneMaker = new sceneMaker(),
+            scene = sceneMaker.scene;
+
+    ///////////////// custom code for this example
+
+    // Draw a curve
+    var red_material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
+    var curve = new THREE.ArcCurve(
+            0,  0,              // ax, aY
+            60, 0,              // aRadius, aStartAngle
+            2 * Math.PI / 3,    //  aEndAngle
+            false               // aClockwise
+    );
+
+    // Make a function that takes (u,v) and returns a vector3.
+    // ParametricGeometry objects require the (u,v) range to be 0-->1, so make sure your curve
+    // is parameterized that way going in.
+    // For the purposes of this example, I'll assume that the "v" direction is the vertical extrusion, and "u"
+    // direction is fetched from the curve in question.
+    // See "meshFunction" in https://stemkoski.github.io/Three.js/Graphulus-Function.html for more detail
+    var segmentsU = 30,
+        segmentsV = 30,
+        extrudeDistance = 50;
+
+    var parametricFunction = function(u,v){
+        var vec = curve.getPoint(u);
+        vec.z = v*extrudeDistance;
+        return vec;
+    };
+
+    var geometry = new THREE.ParametricGeometry( parametricFunction, segmentsU, segmentsV );
+
+    var mesh = new THREE.Mesh(geometry,red_material);
+    scene.add(mesh);
+    sceneMaker.render();
+</script>
+</body>
+</html>
