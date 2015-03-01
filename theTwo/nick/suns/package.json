@@ -1,17 +1,44 @@
 {
-  "name": "suns",
-  "version": "1.0.0",
+  "name": "parametric lamp",
   "description": "",
-  "main": "suns.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "nick merrill",
+    "email": "ffff@berkeley.edu",
+    "url": "http://coolworld.me"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "src",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
   "dependencies": {
-    "coordinate-tz": "^0.1.2",
-    "lodash": "^3.3.1",
     "suncalc": "^1.6.0",
-    "zoneinfo": "^0.1.8"
-  }
+    "underscore": "~1.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4",
+    "grunt-browserify": "~2",
+    "jasmine-node": "~1.13.1",
+    "grunt-contrib-jasmine": "~0.6.1",
+    "grunt-cli": "~0.1.13",
+    "grunt-jasmine-node": "~0.1",
+    "underscore": "~1.4.4",
+    "browserify": "~3"
+  },
+  "keywords": [
+    "grunt",
+    "jasmine",
+    "browserify"
+  ]
 }
