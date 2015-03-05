@@ -13,7 +13,7 @@
     ///////////////// custom code for this example
 
     // Draw a curve
-    var red_material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
+    var red_material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), side:THREE.DoubleSide});
     var curve = new THREE.ArcCurve(
             0,  0,              // ax, aY
             60, 0,              // aRadius, aStartAngle

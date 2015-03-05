@@ -13,8 +13,10 @@
     ///////////////// custom code for this example
 
     // Draw a curve
-    var red_material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
-    var curve = new THREE.ArcCurve(
+    //var material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
+	//var material = new THREE.MeshPhongMaterial({color: new THREE.Color("red"),side: THREE.DoubleSide});
+	var material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), side: THREE.DoubleSide});
+    /*var curve = new THREE.ArcCurve(
             0,  0,              // ax, aY
             60, 0,              // aRadius, aStartAngle
             2 * Math.PI / 3,    //  aEndAngle
@@ -32,16 +34,44 @@
         extrudeDistance = 50;
 
     var parametricFunction = function(u,v){
-        var vec = curve.getPoint(u);
+        /*var vec = curve.getPoint(u);
         vec.z = v*extrudeDistance;
-        return vec;
+		drawPoint(vec,'red');
+		console.log(vec);
+		var vec2 = curve.getPoint(u);
+		vec2.z = extrudeDistance;
+		drawPoint(vec2,'blue');
+        return vec; 
+		var vec = new THREE.Vector3(curve.getPoint(u).x,curve.getPoint(u).y,extrudeDistance);
+		drawPoint(vec,'blue');
+		console.log(vec);
+		return vec;
     };
 
-    var geometry = new THREE.ParametricGeometry( parametricFunction, segmentsU, segmentsV );
+    var geometry = new THREE.ParametricGeometry( parametricFunction, segmentsU, segmentsV );*/
 
-    var mesh = new THREE.Mesh(geometry,red_material);
+	var geometry = new THREE.Geometry();
+	geometry.vertices.push(
+		new THREE.Vector3( -10,  10, 0 ),
+		new THREE.Vector3( -10, -10, 0 ),
+		new THREE.Vector3(  10, -10, 0 ),
+		new THREE.Vector3(10,10,0)
+	);
+
+	geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
+	geometry.faces.push(new THREE.Face3(0,2,3));
+	
+    var mesh = new THREE.Mesh(geometry,material);
     scene.add(mesh);
-    sceneMaker.render();
+    sceneMaker.render();	
+	
+	function drawPoint(pt,color){
+		var material = new THREE.MeshBasicMaterial({color:new THREE.Color(color)});
+		var circle_geometry = new THREE.CircleGeometry(.5,30);
+		var circle = new THREE.Mesh(circle_geometry,material);
+		circle.position.set(pt.x,pt.y,0);
+		scene.add(circle);
+	}
 </script>
 </body>
 </html>
