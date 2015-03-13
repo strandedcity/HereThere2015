@@ -14,9 +14,9 @@
 
     // Draw a curve
     //var material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), wireframe: true});
-	//var material = new THREE.MeshPhongMaterial({color: new THREE.Color("red"),side: THREE.DoubleSide});
-	var material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), side: THREE.DoubleSide});
-    /*var curve = new THREE.ArcCurve(
+	var material = new THREE.MeshPhongMaterial({color: new THREE.Color("red"),side: THREE.DoubleSide});
+	//var material = new THREE.MeshBasicMaterial({color:new THREE.Color("red"), side: THREE.DoubleSide});
+    var curve = new THREE.ArcCurve(
             0,  0,              // ax, aY
             60, 0,              // aRadius, aStartAngle
             2 * Math.PI / 3,    //  aEndAngle
@@ -24,7 +24,7 @@
     );
 
     // Make a function that takes (u,v) and returns a vector3.
-    // ParametricGeometry objects require the (u,v) range to be 0-->1, so make sure your curve
+    // ParametricGeometry objects require the (u,v) range to be 01, so make sure your curve
     // is parameterized that way going in.
     // For the purposes of this example, I'll assume that the "v" direction is the vertical extrusion, and "u"
     // direction is fetched from the curve in question.
@@ -34,7 +34,7 @@
         extrudeDistance = 50;
 
     var parametricFunction = function(u,v){
-        /*var vec = curve.getPoint(u);
+        var vec = curve.getPoint(u);
         vec.z = v*extrudeDistance;
 		drawPoint(vec,'red');
 		console.log(vec);
@@ -48,9 +48,9 @@
 		return vec;
     };
 
-    var geometry = new THREE.ParametricGeometry( parametricFunction, segmentsU, segmentsV );*/
+    var geometry = new THREE.ParametricGeometry( parametricFunction, segmentsU, segmentsV );
 
-	var geometry = new THREE.Geometry();
+	/*var geometry = new THREE.Geometry();
 	geometry.vertices.push(
 		new THREE.Vector3( -10,  10, 0 ),
 		new THREE.Vector3( -10, -10, 0 ),
@@ -59,7 +59,7 @@
 	);
 
 	geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
-	geometry.faces.push(new THREE.Face3(0,2,3));
+	geometry.faces.push(new THREE.Face3(0,2,3));*/
 	
     var mesh = new THREE.Mesh(geometry,material);
     scene.add(mesh);

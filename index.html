@@ -4,13 +4,34 @@
 	<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
 	<title>Paralamptric</title>
 	<!-- JQuery -->
+	<link rel="stylesheet" href="./lib/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript' charset='utf-8'></script>
-	<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='./lib/jquery-ui-1.11.4.custom/jquery-ui.min.js' type='text/javascript' charset='utf-8'></script>
+	<!-- Boostrap -->
+	<link href="./lib/bootstrap.min.css" rel="stylesheet">
+	<script src="./lib/bootstrap.min.js"></script>
+	<!-- ThreeJS -->
+	<script src="./lib/three.min.js"></script>
+	<script src="./lib/OrbitControls.js"></script>
 	<!-- Styles and Scripts -->
 	<link href='./lib/paralamptric_styles.css' rel='stylesheet' type='text/css' media='screen'>
-	<!-- <script src='./lib/paralamptric_scripts.js' type='text/javascript' charset='utf-8'></script> -->
+	<script src='./lib/paralamptric_scripts.js' type='text/javascript' charset='utf-8'></script>
+	<script src='./lib/paralamptric_viewer_scripts.js' type='text/javascript' charset='utf-8'></script>
 </head>
 
 <body>
-	<iframe id='model_viewer' src='./paralamptric_model_viewer.html'></iframe>
+	<!-- <div>
+		<iframe id='viewer' src='paralamptric_viewer.html'></iframe>
+	</div> -->
+	<div class="row">
+		<div class="col-md-1">
+			<div id="slider"></div>
+		</div>
+		<div class="col-md-5">
+			<div id="model_container"></div>
+		</div>
+		<div class="col-md-5">
+			<div id="cut_container"></div>
+		</div>
+	</div>
 </body>
