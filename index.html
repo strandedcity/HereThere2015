@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="./lib/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript' charset='utf-8'></script>
 	<script src='./lib/jquery-ui-1.11.4.custom/jquery-ui.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='./lib/jquery.knob.js' type='text/javascript' charset='utf-8'></script>
 	<!-- Boostrap -->
 	<link href="./lib/bootstrap.min.css" rel="stylesheet">
 	<script src="./lib/bootstrap.min.js"></script>
@@ -20,11 +21,11 @@
 </head>
 
 <body>
-	<!-- <div>
-		<iframe id='viewer' src='paralamptric_viewer.html'></iframe>
-	</div> -->
 	<div class="row">
-		<div class="col-md-1">
+		<div class="col-md-1" id="slider_container">
+			<button type="button" class="btn btn-default" id="construction_button">Draw Construction</button>
+			<input type="text" id="dial" value=45>
+			<h2 id="height_label">50</h2>
 			<div id="slider"></div>
 		</div>
 		<div class="col-md-5">
