@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "lodash": "^3.3.1",
-    "suncalc": "^1.6.0",
+    "suncalc": "^1.6.0"
   },
   "devDependencies": {
     "grunt-contrib-uglify": "~0.3.2",
