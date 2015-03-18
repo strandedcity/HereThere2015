@@ -8,6 +8,7 @@
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript' charset='utf-8'></script>
 	<script src='./lib/jquery-ui-1.11.4.custom/jquery-ui.min.js' type='text/javascript' charset='utf-8'></script>
 	<script src='./lib/jquery.knob.js' type='text/javascript' charset='utf-8'></script>
+	<script src="./lib/jquery.textfill.min.js"></script>
 	<!-- Boostrap -->
 	<link href="./lib/bootstrap.min.css" rel="stylesheet">
 	<script src="./lib/bootstrap.min.js"></script>
@@ -21,18 +22,20 @@
 </head>
 
 <body>
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-1" id="slider_container">
-			<button type="button" class="btn btn-default" id="construction_button">Draw Construction</button>
+		<div class="col-md-2 col-xs-2" id="slider_container">
+			<button type="button" class="btn btn-default" id="construction_button"><span>Draw Construction</span></button>
 			<input type="text" id="dial" value=45>
 			<h2 id="height_label">50</h2>
 			<div id="slider"></div>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-5 col-xs-5">
 			<div id="model_container"></div>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-5 col-xs-5">
 			<div id="cut_container"></div>
 		</div>
 	</div>
+</div>
 </body>
