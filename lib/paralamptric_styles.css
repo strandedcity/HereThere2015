@@ -12,29 +12,19 @@ html,body,div{
 #slider{
 	margin-left:auto;
 	margin-right:auto;
-	height:40%;
 }
 
 #slider_container{
 	height:100%;
-	margin-top:40px;
 	text-align:center;
 }
  
-#viewer{
-	width:80%;
-	height:100%;
-}
 
 #height_label{
 	font-weight:bold;
 	color:orange;
-	font-size:31px;
 }
 
-#construction_button{
-	margin-bottom:100px;
-}
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
 	outline:none;
 }
