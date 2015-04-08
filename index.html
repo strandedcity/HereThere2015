@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="./lib/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript' charset='utf-8'></script>
 	<!-- Boostrap -->
-	<link href="./lib/bootstrap.min.css" rel="stylesheet">
-	<script src="./lib/bootstrap.min.js"></script>
+	<link href="./lib/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="./lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 	<!-- JQuery UI -->
 	<script src='./lib/jquery-ui-1.11.4.custom/jquery-ui.min.js' type='text/javascript' charset='utf-8'></script>
 	<script src='./lib/jquery.knob.js' type='text/javascript' charset='utf-8'></script>
@@ -28,6 +28,19 @@
 </head>
 
 <body>
+<div id='help_modal' class='modal' tabindex='-1' role='dialog' aria-labelledby='basicModal' aria-hidden='true' data-backdrop='false'>
+	<div class='modal-dialog'>
+		<div class='modal-content'>
+			<div class='modal-body'>
+				<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+				<h4><i class='glyphicon glyphicon-refresh'></i><span class='indent'>Orbit: Left click | One finger touch</span></h4>
+				<h4><i class='glyphicon glyphicon-move'></i><span class='indent'>Pan: Right click | Three finger touch</span></h4>
+				<h4><i class='glyphicon glyphicon-zoom-in'></i><span class='indent'>Zoom In: Mouse wheel up | Two finger pinch out</span></h4>
+				<h4><i class='glyphicon glyphicon-zoom-out'></i><span class='indent'>Zoom Out: Mouse wheel down | Two finger pinch in</span></h4>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="row">
 		<div id="slider_container" class="col-md-2 col-xs-2">
@@ -40,7 +53,7 @@
 			<h2 id="height_label"></h2>
 			<div id="slider"></div>
 			<div id="sheet_maker" class="ui-widget ui-corner-all">
-				<p>Enter size of sheet to add:</p><br>
+				<p>Enter size of sheet to add:</p>
 				<p class="sheet_slider_label">
 					<label for="sheet_width_value">Width:</label>
 					<input type="text" id="sheet_width_value" readonly>
@@ -59,8 +72,10 @@
 			<div id="model_container" class="geometry_container effect2"></div>
 		</div>
 		<div class="col-md-5 col-xs-5">
+			<a id='help_btn' href='#' class='glyphicon glyphicon-question-sign' data-toggle='modal' data-target='#help_modal' ><span data-toggle="tooltip" data-placement="bottom" title="Help"></span></a>	
 			<div id="cut_container" class="geometry_container effect2"></div>
 		</div>
+		
 	</div>
 </div>
 </body>

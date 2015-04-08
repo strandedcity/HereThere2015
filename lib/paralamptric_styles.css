@@ -4,9 +4,10 @@ html,body,div{
 	padding: 0;
 	margin: 0;
  }
- 
+
  body{
 	margin-left:20px;
+	overflow-x:hidden;
  }
  
 #construction_button{
@@ -21,9 +22,12 @@ html,body,div{
 	background-image: url("../images/worldmap.png");
 }
 #map_pin {
-	background-color:orange;
-	width:20px;
-	height:20px;
+	//background-color:orange;
+	width:40px;
+	height:40px;
+	background-image:url("../images/location-icon.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 #slider{
@@ -60,6 +64,33 @@ html,body,div{
 	display:block;
 }
 
+#help_modal .modal-content{
+	background-color:rgba(255,255,255,.75) !important;
+	height:auto !important;
+}
+
+#help_btn{
+	float:right;
+	margin-top:10px;
+}
+
+.glyphicon.glyphicon-question-sign {
+    font-size: 30px;
+}
+
+.indent{
+	padding-left:1em;
+}
+
+a:hover {
+	text-decoration: none;
+	color:gray !important;
+}
+
+a{
+	color:orange;
+}
+
 .sheet_slider_label{
 	text-align:left;
 	margin-bottom:2px;
@@ -77,8 +108,9 @@ html,body,div{
 }
 
 .geometry_container{
-	height:95%;
+	height:90%;
 	margin: 10px;
+	margin-top:50px;
 }
 
 a.close_button{
