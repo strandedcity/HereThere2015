@@ -33,6 +33,7 @@
 		<div id="slider_container" class="col-md-2 col-xs-2">
 			<button id="construction_button" type="button" class="btn btn-default"><span>Draw Construction</span></button>
 			<!-- <input type="text" id="dial" value=45> -->
+			<!-- <div class="well section_header">Location</div> -->
 			<div id = "map"> 
 				 <div id = "map_pin"></div>
 			</div>
@@ -40,13 +41,13 @@
 			<div id="slider"></div>
 			<div id="sheet_maker" class="ui-widget ui-corner-all">
 				<p>Enter size of sheet to add:</p><br>
-				<p>
-					<label for="sheet_width_value">Width(in):</label>
+				<p class="sheet_slider_label">
+					<label for="sheet_width_value">Width:</label>
 					<input type="text" id="sheet_width_value" readonly>
 				</p>
 				<div id="sheet_width_slider"></div>
-				<p>
-					<label for="sheet_height_value">Height(in):</label>
+				<p class="sheet_slider_label">
+					<label for="sheet_height_value">Height:</label>
 					<input type="text" id="sheet_height_value" readonly>
 				</p>
 				<div id="sheet_height_slider"></div>
@@ -55,10 +56,10 @@
 			</div>
 		</div>
 		<div class="col-md-5 col-xs-5">
-			<div id="model_container"></div>
+			<div id="model_container" class="geometry_container effect2"></div>
 		</div>
 		<div class="col-md-5 col-xs-5">
-			<div id="cut_container"></div>
+			<div id="cut_container" class="geometry_container effect2"></div>
 		</div>
 	</div>
 </div>

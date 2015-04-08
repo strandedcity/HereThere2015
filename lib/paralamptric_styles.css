@@ -9,6 +9,9 @@ html,body,div{
 	margin-left:20px;
  }
  
+#construction_button{
+	margin-bottom:20px;
+}
  
 #map {
 	width: 100%;
@@ -32,7 +35,6 @@ html,body,div{
 	height:100%;
 	text-align:center;
 }
- 
 
 #height_label{
 	font-weight:bold;
@@ -51,11 +53,27 @@ html,body,div{
 }
 
 #add_sheet_button_div{
-	height:80px;
+	height:50px;
 }
 
 #sheet_list p{
 	display:block;
+}
+
+.sheet_slider_label{
+	text-align:left;
+	margin-bottom:2px;
+	margin-top:15px;
+}
+
+.section_header{
+	height:15px;
+	line-height:7.5px;
+	text-align:left;
+}
+
+.well{
+	padding:15px !important;
 }
 
 .geometry_container{
