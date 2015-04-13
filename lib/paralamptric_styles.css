@@ -107,6 +107,11 @@ a{
 	margin-top:15px;
 }
 
+#download_button{
+	background:orange;
+	font-weight:bold;
+}
+
 .sheet_slider_label{
 	text-align:left;
 	margin-bottom:2px;
