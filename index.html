@@ -44,34 +44,46 @@
 <div class="container-fluid">
 	<div class="row">
 		<div id="slider_container" class="col-md-2 col-xs-2">
-			<button id="construction_button" type="button" class="btn btn-default"><span>Draw Construction</span></button>
+			<button id="construction_button" type="button" class="btn btn-default"><span>Draw Construction Lines</span></button>
 			<!-- <input type="text" id="dial" value=45> -->
-			<!-- <div class="well section_header">Location</div> -->
-			<div id = "map"> 
-				 <div id = "map_pin"></div>
+			<div id="map_panel" class="panel panel-default">
+				<div class="panel-heading section_header">Set location:</div>
+				<div class="panel-body">
+					<div id = "map"> 
+						 <div id = "map_pin"></div>
+					</div>
+				</div>
 			</div>
-			<h2 id="height_label"></h2>
-			<div id="slider"></div>
-			<div id="sheet_maker" class="ui-widget ui-corner-all">
-				<p>Add sheets:</p>
-				<p class="sheet_slider_label">
-					<label for="sheet_width_value">Width:</label>
-					<input type="text" id="sheet_width_value" readonly>
-				</p>
-				<div id="sheet_width_slider"></div>
-				<p class="sheet_slider_label">
-					<label for="sheet_height_value">Height:</label>
-					<input type="text" id="sheet_height_value" readonly>
-				</p>
-				<div id="sheet_height_slider"></div>
-				<div id="add_sheet_button_div"><button id="add_sheet_button" type="button" class="btn btn-default"><span>Add Sheet</span></button></div>
-				<div id="sheet_list"></div>
+			<div id="height_panel" class="panel panel-default">
+				<div class="panel-heading section_header">Adjust height:</div>
+				<div class="panel-body">
+					<h2 id="height_label"></h2>
+					<div id="slider"></div>
+				</div>
+			</div>
+			<div id="sheet_maker" class="panel panel-default">
+				<div class="panel-heading section_header">Add sheets:</div>
+				<!-- <p>Add sheets:</p> -->
+				<div class="panel-body">
+					<p class="sheet_slider_label">
+						<label for="sheet_width_value">Width:</label>
+						<input type="text" id="sheet_width_value" readonly>
+					</p>
+					<div id="sheet_width_slider"></div>
+					<p id="sheet_height_label" class="sheet_slider_label">
+						<label for="sheet_height_value">Height:</label>
+						<input type="text" id="sheet_height_value" readonly>
+					</p>
+					<div id="sheet_height_slider"></div>
+					<div id="add_sheet_button_div"><button id="add_sheet_button" type="button" class="btn btn-default"><span>Add Sheet</span></button></div>
+					<div id="sheet_list"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-5 col-xs-5">
+		<div class="col-md-5 col-xs-5 geometry_super_container">
 			<div id="model_container" class="geometry_container effect2"></div>
 		</div>
-		<div class="col-md-5 col-xs-5">
+		<div class="col-md-5 col-xs-5 geometry_super_container">
 			<a id='help_btn' href='#' class='glyphicon glyphicon-question-sign' data-toggle='modal' data-target='#help_modal' ><span data-toggle="tooltip" data-placement="bottom" title="Help"></span></a>	
 			<div id="cut_container" class="geometry_container effect2"></div>
 		</div>
