@@ -56,7 +56,7 @@
 	margin-top:5px;
 }
 
-#sheet_width_value, #sheet_height_value{
+#sheet_width_value, #sheet_height_value, #sheet_thickness_value{
 	border:0;
 	color:#f6931f;
 	font-weight:bold;

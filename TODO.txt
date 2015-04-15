@@ -1,4 +1,5 @@
 <ERICA>
+-ask Phil about SVG units to inches
 
 <NICK>
 -fix map pin so can be dragged to top of map
