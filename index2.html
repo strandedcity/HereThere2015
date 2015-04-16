@@ -2,10 +2,9 @@
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
 	<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
-	<title>ParaLamp</title>
+	<title>Carry:Lamp</title>
 	<!-- JQuery -->
 	<link rel="stylesheet" href="./lib/jquery-ui-1.11.4.custom/jquery-ui.css">
-	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' type='text/javascript' charset='utf-8'></script> -->
 	<script src='./lib/jquery.js' type='text/javascript' charset='utf-8'></script>
 	<!-- Boostrap -->
 	<link href="./lib/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,12 +19,10 @@
 	<script src="./lib/SVGRenderer.js"></script>
 	<script src="./lib/Projector.js"></script>
 	<script src="./lib/OrbitControlsModified.js"></script>
-	<!-- Suncalc -->
-	<script src="./lib/suncalc.js"></script>
 	<!-- Styles and Scripts -->
-	<link href='./lib/paralamptric_styles.css' rel='stylesheet' type='text/css' media='screen'>
-	<script src='./lib/paralamptric_scripts.js' type='text/javascript' charset='utf-8'></script>
-	<script src='./lib/paralamptric_viewer_scripts.js' type='text/javascript' charset='utf-8'></script>
+	<link href='./lib/carrylamp_styles.css' rel='stylesheet' type='text/css' media='screen'>
+	<script src='./lib/carrylamp_scripts.js' type='text/javascript' charset='utf-8'></script>
+	<script src='./lib/carrylamp_viewer_scripts.js' type='text/javascript' charset='utf-8'></script>
 </head>
 
 <body>
@@ -44,24 +41,7 @@
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<div id="slider_container" class="col-md-2 col-xs-2">
-			<button id="construction_button" type="button" class="btn btn-default"><span>Draw Construction Lines</span></button>
-			<!-- <input type="text" id="dial" value=45> -->
-			<div id="map_panel" class="panel panel-default">
-				<div class="panel-heading section_header">Set location:</div>
-				<div class="panel-body">
-					<div id="map"> 
-						 <div id="map_pin"></div>
-					</div>
-				</div>
-			</div>
-			<div id="height_panel" class="panel panel-default">
-				<div class="panel-heading section_header">Adjust height:</div>
-				<div class="panel-body">
-					<h2 id="height_label"></h2>
-					<div id="slider"></div>
-				</div>
-			</div>
+		<div id="controls_container" class="col-md-2 col-xs-2">
 			<div id="thickness_panel" class="panel panel-default">
 				<div class="panel-heading section_header">Adjust sheet thickness:</div>
 				<div class="panel-body">

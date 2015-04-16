@@ -1,0 +1,159 @@
+ html,body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+ }
+
+ body{
+	margin-left:20px;
+	overflow-x:hidden;
+ }
+ 
+#construction_button{
+	margin-top: 20px;
+	margin-bottom:20px;
+	font-size:14px;
+}
+
+#slider{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#slider_container{
+	height:100%;
+	text-align:center;
+}
+
+#height_label{
+	font-weight:bold;
+	color:orange;
+	margin-top:5px;
+}
+
+#sheet_width_value, #sheet_height_value, #sheet_thickness_value{
+	border:0;
+	color:#f6931f;
+	font-weight:bold;
+}
+
+#add_sheet_button{
+	margin-top:10px;
+	float:right;
+}
+
+#add_sheet_button_div{
+	height:50px;
+}
+
+#sheet_list p{
+	display:block;
+}
+
+#help_modal .modal-content{
+	background-color:rgba(255,255,255,.75) !important;
+	height:auto !important;
+}
+
+#help_btn{
+	float:right;
+	margin-right:35px;
+	margin-top:10px;
+}
+
+.glyphicon.glyphicon-question-sign {
+    font-size: 30px;
+}
+
+.indent{
+	padding-left:1em;
+}
+
+a:hover {
+	text-decoration: none;
+	color:gray !important;
+}
+
+a{
+	color:orange;
+}
+
+#sheet_height_label{
+	margin-top:15px;
+}
+
+#download_button{
+	background:orange;
+	font-weight:bold;
+}
+
+.sheet_slider_label{
+	text-align:left;
+	margin-bottom:2px;
+	overflow: hidden;
+    white-space: nowrap;
+}
+
+.section_header{
+	height:15px;
+	line-height:7.5px;
+	text-align:left;
+}
+
+.well{
+	padding:15px !important;
+}
+
+.section_header{
+	font-weight:bold;
+	font-size:12px;
+}
+
+.geometry_container{
+	height:90%;
+	margin: 10px;
+	margin-top:50px;
+}
+
+.geometry_super_container{
+	padding: 0;
+	margin: 0;
+}
+
+a.close_button{
+    float:right;
+    margin-top:-30px;
+    margin-right:-30px;
+    padding: 11px 35px;
+	line-height: 0px;
+	display: inline-block;
+	color: gray;
+	cursor:pointer;
+	font-size: 31px;
+	text-decoration: none;    
+}
+
+.close_button:before {
+    content: "×";
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+	outline:none;
+}
+
+.btn-default.active{
+	background-color:orange;
+}
+
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+.effect2{
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
