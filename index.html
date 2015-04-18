@@ -62,11 +62,21 @@
 					<div id="slider"></div>
 				</div>
 			</div>
+			<div id="width_panel" class="panel panel-default">
+				<div class="panel-heading section_header">Adjust width:</div>
+				<div class="panel-body">
+					<p class="sheet_slider_label">
+						<label for="width_value">Width:</label>
+						<input type="text" id="width_value" readonly>
+					</p>
+					<div id="width_slider"></div>
+				</div>
+			</div>
 			<div id="thickness_panel" class="panel panel-default">
 				<div class="panel-heading section_header">Adjust sheet thickness:</div>
 				<div class="panel-body">
 					<p class="sheet_slider_label">
-						<label for="sheet_thickness_value">Thickness:</label>
+						<label for="sheet_thickness_value">Sheet Thickness:</label>
 						<input type="text" id="sheet_thickness_value" readonly>
 					</p>
 					<div id="sheet_thickness_slider"></div>
@@ -76,13 +86,13 @@
 				<div class="panel-heading section_header">Add sheets:</div>
 				<div class="panel-body">
 					<p class="sheet_slider_label">
-						<label for="sheet_width_value">Width:</label>
-						<input type="text" id="sheet_width_value" readonly>
+						<label for="sheet_width_value">Sheet Width:</label>
+						<input type="text" id="sheet_width_value" onclick="this.select()">
 					</p>
 					<div id="sheet_width_slider"></div>
 					<p id="sheet_height_label" class="sheet_slider_label">
-						<label for="sheet_height_value">Height:</label>
-						<input type="text" id="sheet_height_value" readonly>
+						<label for="sheet_height_value">Sheet Height:</label>
+						<input type="text" id="sheet_height_value" onclick="this.select()">
 					</p>
 					<div id="sheet_height_slider"></div>
 					<div id="add_sheet_button_div"><button id="add_sheet_button" type="button" class="btn btn-default unclick"><span>Add Sheet</span></button></div>
