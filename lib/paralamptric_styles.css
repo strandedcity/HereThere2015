@@ -24,9 +24,10 @@
 }
  
 #map {
-	width: 160px;
+	/* width: 160px; */
 	height: 125px;
-	background-size: 160px 100px;
+	/* background-size: 160px 100px; */
+	background-size: 100%;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	background-image: url("../images/worldmap.png");
